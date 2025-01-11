@@ -1,0 +1,7 @@
+id=GDPIT
+name=GoidaDPI (Terminal)
+version=v0.0.1
+versionCode=1
+author=AvaRuk
+description=Disable DPI for phone
+minMagisk=18000

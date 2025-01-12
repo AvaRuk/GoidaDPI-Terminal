@@ -88,7 +88,7 @@ nft add rule $nftname pre $iifnm udp sport "{ $(echo $NFQWS_PORTS_UDP | sed 's/ 
 fi; else iptMultiPort "tcp" "$NFQWS_PORTS_TCP"; iptMultiPort "udp" "$NFQWS_PORTS_UDP"; fi;
 
 nfqws --daemon --uid=0:0 --qnum=200 $NFQWS_OPT 
-echo "AntiDPI service enabled"; return 0; fi
+echo "GoidaDPI service enabled"; return 0; fi
 
 #Stop service
 if [ "$1" == "stop" ]; then

@@ -5,12 +5,10 @@ uselist="1"; #Enable or disable auto host list
 dpi_lists_path="/data/adb/modules/GDPIT/DPI"; #Path for host lists and desync fake bin files (for Android set "/sdcard/Android")
 mkhlist="1"; #Auto creating host lists for Youtube and Discord
 ###################
-dpi_list="DPI_list.txt"; #Url list 
-dpi_ignore="DPI_ignore.txt"; #Ignore url list 
 nftname="inet zapret"; iptname="mangle"; #Name of tables 
 
 #Start service
-if [ "$1" == "start" ]; then echo "Starting AntiDPI service..."; 
+if [ "$1" == "start" ]; then echo "Starting GoidaDPI service..."; 
 
 
 
@@ -95,7 +93,7 @@ if [ "$1" == "stop" ]; then
 if [[ $use_iptables == "0" ]]; then nft delete table $nftname; 
 else iptables -t $iptname -F PREROUTING; iptables -t $iptname -F POSTROUTING; fi; 
 kill "$(pidof nfqws)";
-echo "AntiDPI service disabled"; return 0; fi;
+echo "GoidaDPI service disabled"; return 0; fi;
 
 
 #Help info

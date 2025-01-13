@@ -1,4 +1,5 @@
 iptname="mangle"; 
+dpi_lists_path="/data/adb/modules/GDPIT/DPI";
 
 #Start service
 if [ "$1" == "start" ]; then echo "Starting GoidaDPI service..."; 
